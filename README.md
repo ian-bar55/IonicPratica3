@@ -1,2 +1,7 @@
 # IonicPratica3
-Ramon, tive um problema de permissões na minha máquina e após resolvê-lo me sobrou pouco tempo para fazer o restante da prática. Fiz o que podia até meia noite e até domingo irei mandar ela completa.
+Funcionalidades usadas na galeria de fotos:
+  Plugins: funcionalidades de câmera, de diretório e de armazenamento;
+  Tipo de câmera;
+  Ação de tirar foto;
+  Diretório de sistema;
+  Capacitor que gerencia todas as funcionalidades.

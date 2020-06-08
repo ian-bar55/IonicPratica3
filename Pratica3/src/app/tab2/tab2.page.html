@@ -5,13 +5,75 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+id:number,
+    first_name:string,
+    last_name:string,
+    email:string,
+    gender:string,
+    latitude:number,
+    longitude: number
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list *ngIf="!exibirFormulario">
+    <IonItem>
+      <IonLabel>Id: {{pessoaCadastrada.id?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Primeiro Nome: {{pessoaCadastrada.first_name?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Ultimo Nome:  {{pessoaCadastrada.last_name?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Email: {{pessoaCadastrada.email?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Genero: {{pessoaCadastrada.gender?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Latitude: {{pessoaCadastrada.latitude?}}</IonLabel>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Longitude: {{pessoaCadastrada.longitude?}}</IonLabel>
+    </IonItem>
+  </ion-list>
+  
+  <form *ngIf="exibirFormulario" (ngSubmit)="cadastrar()">
+    <IonItem>
+      <IonLabel>Id</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.id" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Primeiro Nome</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.first_name" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Ultimo Nome</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.last_name" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Email</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.email" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Genero</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.gender" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Latitude</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.latitude" name="title"></ion-input>
+    </IonItem>
+    <IonItem>
+      <IonLabel>Longitude</IonLabel>
+      <ion-input type="text" [(ngModel)]="pessoaCadastrada.longitude" name="title"></ion-input>
+    </IonItem>
+    <button ion-button type="submit" block>Adicionar Pessoa</button>
+  </form>
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>

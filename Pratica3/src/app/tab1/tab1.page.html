@@ -12,6 +12,21 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <ion-grid *ngIf="exibirGrid">
+    <ion-row>
+      <ion-col styles="text-align: left">Nome</ion-col>
+      <ion-col styles="text-align: left">Idade</ion-col>
+      <ion-col styles="text-align: left">Genero</ion-col>
+      <ion-col styles="text-align: left">Latitude</ion-col>
+      <ion-col styles="text-align: left">Longitude</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let pessoa of pessoas" class="ion-align-items-start">
+      <ion-col>{{pessoa.nome}}</ion-col>
+      <ion-col>{{pessoa.idade}}</ion-col>
+      <ion-col>{{pessoa.genero}}</ion-col>
+      <ion-col>{{pessoa.latitude}}</ion-col>
+      <ion-col>{{pessoa.longitude}}</ion-col>
+    </ion-row>
+  </ion-grid>
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
